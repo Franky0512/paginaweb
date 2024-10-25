@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Usuarios</title>
+    <link rel="stylesheet" href="css/vzu.css">
+    <script src="js/jsvzu.js" defer></script>
+</head>
+<body>
+
+    <!-- Contenedor Superior (Solo muestra la ubicación del usuario en el sistema) -->
+    <header class="breadcrumb">
+        <h2 class="location-title">Inicio > Gestión Usuarios</h2> <!-- Ubicación actual del usuario -->
+    </header>
+    
+    <div class="main-layout">
+        <!-- Barra lateral de navegación -->
+        <aside class="sidebar">
+            <nav class="menu">
+                <ul>
+                    <li><a href="Visualizar_Usuarios.html" class="active">Vizualizar Usuarios</a></li>
+                    <li><a href="Administrar_Permisos.html">Administrar Permisos</a></li>
+                    <li><a href="Visualizar_Historial_de_Aceso.html">Vizualizar Historial de Acceso</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Contenedor de opciones  -->
+        <div class="content-area">
+            <!-- Contenedor de busqueda -->
+            <div class="search-container">
+                <label for="usuario">Usuario</label>
+                <input type="text" id="usuario" placeholder="Buscar...">
+                <label for="usuario">Nombre</label>
+                <input type="text" id="usuario" placeholder="Buscar...">
+
+                <!-- Contenedor de Boton de Crear Usuario -->
+                <div class="BotonCrearUsuario-container">
+                    <button id="abrirModal" class="add-user-btn">+ Agregar Usuario</button>
+                </div>
+            </div>
+
+        <!-- Modal para registrar un usuario-->
+        
+        <div id="miModal" class="modal">
+            <div class="modal-contenido">
+                <span class="cerrar">&times;</span>
+                <h2>Registrar Usuario</h2>
+                <form class="formulario">
+                    <!-- Imagen del Usuario -->
+                    <div class="imagen-usuario">
+                        <div class="imagen">
+                            <img src="img/icono_Usuario.png" alt="Imagen del Usuario">
+                        </div>
+                        <div class="botones-imagen">
+                            <button type="button" class="btn-imagen agregar">Agregar</button>
+                            <button type="button" class="btn-imagen eliminar">Eliminar</button>
+                        </div>
+                    </div>
+    
+                    <!-- Información del Usuario -->
+                    <div class="informacion-usuario">
+                        <h3>Información de Usuario</h3>
+    
+                        <label for="dni">DNI:</label>
+                        <input type="text" id="dni" name="dni">
+    
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre">
+    
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" id="apellido" name="apellido">
+    
+
+                        <label for="cargo">Cargo:</label>
+                        <select id="cargo" name="cargo">
+                            <option value="Administrador">Administrador</option>
+                            <option value="Secretaría">Secretaríar</option>
+                            <option value="Contingencias">Contingencias</option>
+                            <option value="Conductor">Conductor</option>
+                        </select>
+
+                        <label for="rango">Rango:</label>
+                        <select id="rango" name="rango">
+                            <option value="Brigradier General">Brigradier General</option>
+                            <option value="Brigradier Mayor">Brigradier Mayor</option>
+                            <option value="Brigradier Teniente">Brigradier Teniente</option>
+                            <option value="Brigradier">Brigradier</option>
+                            <option value="Capitan Teniente">Capitan Teniente</option>
+                            <option value="Sub Teniente">Sub Teniente</option>
+                            <option value="Seccionario">Seccionario</option>
+                        </select>
+
+                        <label for="turno">Turno:</label>
+                        <select id="turno" name="turno">
+                            <option value="Mañana">Mañana</option>
+                            <option value="Tarde">Tarde</option>
+                            <option value="Noche">Noche</option>
+                            <option value="Tiempo Libre">Tiempo Libre</option>
+                        </select>
+    
+                        <h3>Credenciales de Usuario</h3>
+    
+                        <label for="usuario">Usuario:</label>
+                        <input type="text" id="Usuario" name="usuario" readonly>
+    
+                        <label for="password">Contraseña:</label>
+                        <input type="password" id="password" name="password">
+    
+                        <label for="tipo">Tipo de Usuario:</label>
+                        <select id="tipo" name="tipo">
+                            <option value="operario">Operario</option>
+                            <option value="admin">Administrador</option>
+                        </select>
+    
+                        <label for="permisos">Permisos:</label>
+                        <select id="permisos" name="permisos">
+                            <option value="funcionales">Funcionales</option>
+                            <option value="administrativos">Administrativos</option>
+                        </select>
+                    </div>
+                </form>
+    
+                <!-- Botones de acción -->
+                <div class="botones">
+                    <button class="guardar" type="submit" onclick="guardarDatos()" >Guardar</button>
+                    <button class="cancelar" type="button" onclick="cerrarModal()">Cancelar</button>
+                </div>
+            </div>
+        </div>
+
+
+            <!-- Sección de novedades -->
+            <section class="novedades">
+
+                <div class="table-container">
+                    <table id="tablaUsuarios">
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox"></th>
+                                <th>Usuario</th>
+                                <th>Nombre</th>
+                                <th>Apellidos</th>
+                                <th>DNI</th>
+                                <th>Cargo</th>
+                                <th>Rango</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>ktshapiamar</td>
+                                <td>Kent Tare</td>
+                                <td>Shapiama Ríos</td>
+                                <td>12345678</td>
+                                <td>Contingencias</td>
+                                <td>Teniente</td>
+                                <td>Activo</td>
+                                <td>
+                                    <button class="action-btn edit">✏️</button>
+                                    <button class="action-btn view">👁️</button>
+                                    <button class="action-btn delete">🗑️</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>ktshapiamar</td>
+                                <td>Kent Tare</td>
+                                <td>Shapiama Ríos</td>
+                                <td>12345678</td>
+                                <td>Contingencias</td>
+                                <td>Teniente</td>
+                                <td>Activo</td>
+                                <td>
+                                    <button class="action-btn edit">✏️</button>
+                                    <button class="action-btn view">👁️</button>
+                                    <button class="action-btn delete">🗑️</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>ktshapiamar</td>
+                                <td>Kent Tare</td>
+                                <td>Shapiama Ríos</td>
+                                <td>12345678</td>
+                                <td>Contingencias</td>
+                                <td>Teniente</td>
+                                <td>Activo</td>
+                                <td>
+                                    <button class="action-btn edit">✏️</button>
+                                    <button class="action-btn view">👁️</button>
+                                    <button class="action-btn delete">🗑️</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>ktshapiamar</td>
+                                <td>Kent Tare</td>
+                                <td>Shapiama Ríos</td>
+                                <td>12345678</td>
+                                <td>Contingencias</td>
+                                <td>Teniente</td>
+                                <td>Activo</td>
+                                <td>
+                                    <button class="action-btn edit">✏️</button>
+                                    <button class="action-btn view">👁️</button>
+                                    <button class="action-btn delete">🗑️</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>ktshapiamar</td>
+                                <td>Kent Tare</td>
+                                <td>Shapiama Ríos</td>
+                                <td>12345678</td>
+                                <td>Contingencias</td>
+                                <td>Teniente</td>
+                                <td>Activo</td>
+                                <td>
+                                    <button class="action-btn edit">✏️</button>
+                                    <button class="action-btn view">👁️</button>
+                                    <button class="action-btn delete">🗑️</button>
+                                </td>
+                            </tr>
+                            <!-- Agrega más filas según sea necesario -->
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
+        </div>
+    </div>
+
+    
+
+</body>
+</html>
+
+
+
+
+
+
+        <!-- Filtros de búsqueda -->
+
+        <!-- Tabla de registros de usuarios -->

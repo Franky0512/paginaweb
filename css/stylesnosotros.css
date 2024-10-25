@@ -1,0 +1,403 @@
+/* MENÚ DESPLEGABLE RESPONSIVE*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+  }
+  
+  .banner img {
+    width: 100%;
+    height: auto;
+  }
+  
+  header {
+    background-color: #b22222; /* Rojo relacionado con bomberos */
+    padding: 10px 20px;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-img {
+    width: 50px;
+    margin-right: 10px;
+  }
+  
+  .logo a {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .auth-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  
+  
+  /* BOTONES REGISTRARSE Y INICIAR SESIÓN*/
+  
+  .auth-buttons .btn {
+    background-color: #ffcc00; /* Amarillo relacionado con seguridad y emergencias */
+    border: none;
+    padding: 8px 15px;
+    font-size: 16px;
+    color: #000000;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .auth-buttons .btn:hover {
+    background-color: #e0b500; /* Cambio de color en hover */
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  
+  /* Cambia de color al pasar el cursor */
+  .nav-links a:hover {
+    color: #ffcc00;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #b22222;
+    margin-top: 5px;
+    border-radius: 5px;
+  }
+  
+  .dropdown-content li {
+    width: 150px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .dropdown-content a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    transition: color 0.3s ease;
+  }
+  
+  /* Efecto hover en opciones del menú desplegable */
+  .dropdown-content a:hover {
+    color: #ffcc00;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .burger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+  
+    .auth-buttons {
+        margin-bottom: 10px;
+    }
+  
+    .nav-links {
+        position: absolute;
+        right: 0;
+        height: 100vh;
+        top: 0;
+        background-color: #b22222;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+  
+    .nav-links li {
+        margin: 30px 0;
+    }
+  
+    .nav-links.active {
+        transform: translateX(0%);
+    }
+  
+    .burger {
+        display: flex;
+    }
+  
+    .dropdown-content {
+        position: static;
+        width: 100%;
+        text-align: center;
+    }
+  
+    .logo-img {
+        width: 40px;
+    }
+  }
+  
+  
+  
+  
+  /* CÓDIGO DE CADA SECCIÓN */
+  
+  /* Sección de historia */
+.history-section {
+    background-color: #f7f7f7;
+    padding: 60px;
+    text-align: center;
+}
+
+.history-section h2 {
+    font-size: 30px;
+    color: #b22222;
+    margin-bottom: 20px;
+}
+
+.history-section p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Sección del equipo */
+.team-section {
+    background-color: #fff;
+    padding: 40px;
+    text-align: center;
+}
+
+.team-section h2 {
+    font-size: 30px;
+    color: #b22222;
+    margin-bottom: 40px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.photo img{
+    width: 100%;
+    padding: 0%;
+}
+.team-card {
+    background-color: #f7f7f7;
+    width: 250px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.team-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.team-card h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.team-card p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Sección de recursos */
+.resources-section {
+    background-color: #fff;
+    padding: 40px;
+    text-align: center;
+}
+
+.resources-section h2 {
+    font-size: 30px;
+    color: #b22222;
+    margin-bottom: 40px;
+}
+
+.resources-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.resource-item {
+    background-color: #f7f7f7;
+    width: 250px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resource-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.resource-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.resource-item h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.resource-item p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .team-container, .resources-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-card, .resource-item {
+        width: 80%;
+    }
+}
+
+  
+  
+  
+
+  /* CÓDIGO FOOTER */
+  
+  footer {
+    background-color: #b22222; /* Rojo bomberos */
+    color: white;
+    padding: 30px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .footer-section {
+    flex: 1;
+    padding: 20px;
+    min-width: 250px;
+  }
+  
+  .footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section p, .footer-section ul, .footer-section a {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #ffcc00; /* Amarillo en hover */
+  }
+  
+  .footer-section .social-links a {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #fff;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-section .social-links a:hover {
+    color: #ffcc00;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background-color: #8b1a1a;
+    font-size: 14px;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+  
+    .footer-section {
+        padding: 10px;
+    }
+  }
+  

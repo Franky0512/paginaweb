@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estación de Bomberos Nº 71</title>
+    <link rel="stylesheet" href="css/stylesservicios.css">
+</head>
+<body>
+  
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="img/img1.jpg" alt="Logo Bomberos" class="logo-img">
+                <a href="#">Bomberos Nº 71</a>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <div class="auth-buttons">
+              <button class="btn">Registrarse</button>
+              <button class="btn">Iniciar sesión</button>
+          </div>
+        </nav>
+    </header>
+    
+
+<!--PONER EL CÓDIGO DE CADA SECCIÓN-->
+
+<section class="services-section">
+    <h2>Servicios Ofrecidos</h2>
+
+    <!-- Servicio 1: Atención de Emergencias -->
+    <div class="service-item">
+        <div class="service-header" onclick="toggleService(0)">
+            <h3>Atención de Emergencias</h3>
+            <span class="toggle-icon">+</span>
+        </div>
+        <div class="service-content">
+            <p>
+                Nuestro equipo está capacitado para responder rápidamente a emergencias de diversa índole:
+            </p>
+            <ul>
+                <li>Incendios: Contamos con equipos especializados para controlar y extinguir incendios.</li>
+                <li>Rescates: Realizamos rescates en accidentes de tráfico, alturas y más.</li>
+                <li>Atención Prehospitalaria: Ofrecemos primeros auxilios y atención médica básica en situaciones críticas.</li>
+                <div class="banner">
+                    <img src="img/emergencia.jpg" alt="Banner Bomberos">
+                </div>
+
+            </ul>
+        </div>
+    </div>
+
+    <!-- Servicio 2: Capacitación -->
+    <div class="service-item">
+        <div class="service-header" onclick="toggleService(1)">
+            <h3>Capacitación</h3>
+            <span class="toggle-icon">+</span>
+        </div>
+        <div class="service-content">
+            <p>
+                Organizamos cursos de formación para la comunidad, enfocados en:
+            </p>
+            <ul>
+                <li>Prevención de Incendios: Aprenda cómo prevenir incendios en el hogar y el trabajo.</li>
+                <li>Seguridad General: Consejos sobre cómo actuar en situaciones de emergencia.</li>
+                <li>Primeros Auxilios: Capacitación en reanimación cardiopulmonar (RCP) y otras técnicas vitales.</li>
+            </ul>
+            <div class="banner">
+                <img src="img/capacitacion.jpg" alt="Banner Bomberos">
+            </div>
+        </div>
+    </div>
+
+    <!-- Servicio 3: Voluntariado -->
+    <div class="service-item">
+        <div class="service-header" onclick="toggleService(2)">
+            <h3>Voluntariado</h3>
+            <span class="toggle-icon">+</span>
+        </div>
+        <div class="service-content">
+            <p>
+                Únase a nuestra brigada de bomberos voluntarios. Requisitos:
+            </p>
+            <ul>
+                <li>Ser mayor de 18 años.</li>
+                <li>Buena condición física.</li>
+                <li>Compromiso con la comunidad y disposición para entrenamientos regulares.</li>
+            </ul>
+            <p>
+                <strong>Proceso de Inscripción:</strong> Llene el formulario en línea o acérquese a nuestra estación para más detalles.
+            </p>
+        </br>
+            <div class="banner">
+                <img src="img/voluntarios.jpg" alt="Banner Bomberos">
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+
+    <script src="js/javaservicios.js"></script>
+</body>
+
+<footer>
+  <div class="footer-container">
+      <div class="footer-section about">
+          <h3>Estación de Bomberos Nº 71</h3>
+          <p>Comprometidos con la protección y seguridad de la comunidad de Tarapoto. Actuamos en emergencias, capacitaciones y prevención.</p>
+      </div>
+      
+      <div class="footer-section links">
+          <h3>Enlaces Rápidos</h3>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+      </div>
+
+      <div class="footer-section contact">
+          <h3>Contáctanos</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Tarapoto, Perú</p>
+          <p><i class="fas fa-phone-alt"></i> +51 999 888 777</p>
+          <p><i class="fas fa-envelope"></i> info@bomberos71.pe</p>
+      </div>
+
+      <div class="footer-section social">
+          <h3>Síguenos</h3>
+          <div class="social-links">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+      </div>
+  </div>
+
+  <div class="footer-bottom">
+      &copy; 2024 Estación de Bomberos Voluntarios Nº 71 | Todos los derechos reservados.
+  </div>
+</footer>
+
+
+</html>

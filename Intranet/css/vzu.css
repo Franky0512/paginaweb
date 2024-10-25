@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor superior que indica la ubicación actual */
+.breadcrumb {
+    background-color: #d32f2f;
+    color: white;
+    padding: 15px;
+    text-align: left;
+}
+
+.location-title {
+    font-size: 24px;
+}
+
+/* Estructura principal de la página */
+.main-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Barra de navegación lateral */
+.sidebar {
+    width: 200px;
+    background-color: #f44336;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li {
+    margin-bottom: 10px;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    background-color: #d32f2f;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.menu ul li a:hover,
+.menu ul li a.active {
+    background-color: #b71c1c;
+}
+
+/* Contenedor para las opciones de usuario y novedades */
+.content-area {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Contenedor de búsqueda */
+.search-container {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+/* Contenedor de Boton crear */
+.BotonCrearUsuario-container {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+
+
+.search-container label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.search-container input,
+.search-container select {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 20px;
+}
+
+.add-user-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-user-btn:hover {
+    background-color: #45a049;
+}
+
+
+
+/* Tabla de usuarios */
+
+.novedades {
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.table-container {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th {
+    background-color: #ffcccc;
+    padding: 10px;
+    text-align: left;
+}
+
+tbody td {
+    background-color: #ffe6e6;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+    background-color: #f2f2f2;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.edit {
+    color: #4CAF50;
+}
+
+.view {
+    color: #2196F3;
+}
+
+.delete {
+    color: #f44336;
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none; /* Escondido por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); /* Fondo oscuro */
+}
+
+/* Contenido del modal */
+.modal-contenido {
+    position: absolute; 
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 10px;
+
+    top: -20%;  /* 30% desde la parte superior de la pantalla */
+    left: 30%; /* Centrar horizontalmente */
+
+    width: 700px;  /* Ancho fijo */
+    height: 450px; /* Alto fijo */
+    overflow-y: auto; /* Habilitar scroll vertical si el contenido excede la altura */
+}
+
+/* Botón de cerrar */
+.cerrar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.formulario {
+    display: flex;
+    justify-content: space-between;
+}
+
+.formulario h2 {
+    text-align: center;
+    background-color: #f25454;
+    color: white;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    margin: 0 -20px 20px;
+}
+
+.imagen-usuario {
+    text-align: center;
+    flex: 1;
+    margin-top: 20px; /* Añadir margen superior para bajar la imagen */
+    margin-right:30px;
+}
+
+.imagen img {
+    width: 180px;
+    height: 200px;
+    border: 1px solid #eb0b0b;
+    border-radius: 5px;
+}
+.botones-imagen {
+    text-align: center;
+    margin-top: 10px;
+    margin-left:25px;
+    display: flex; /* Coloca los elementos en fila */
+    gap: 10px; /* Espacio entre los botones */
+}
+.btn-imagen {
+    
+    display: block;
+    background-color: #f25454;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.eliminar {
+    background-color: #ff4d4d;
+}
+
+.informacion-usuario {
+    flex: 2;
+}
+
+.informacion-usuario h3 {
+    margin-bottom: 10px;
+}
+label {
+    display: block;
+    margin: 5px 0;
+}
+.formulario input[type="text"], input[type="password"], select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.botones {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.guardar {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cancelar {
+    background-color: #f25454;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}

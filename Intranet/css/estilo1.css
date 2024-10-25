@@ -1,0 +1,154 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    
+}
+
+/* Estilo del encabezado */
+header {
+    background-color: #d32f2f;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav ul li a:hover {
+    background-color: #555; /* Color de fondo al pasar el mouse */
+}
+
+/* Estilos para el nav vertical fijo */
+.vertical-nav {
+    position: fixed; /* Coloca el menú en la esquina superior izquierda sin ser fijo */
+    top: 0; /* Alineado en la parte superior */
+    left: 1; /* Alineado a la izquierda */
+    width: 200px; /* Ancho del menú */
+    height: 100%; /* La altura del menú se ajusta al contenido */
+    background-color: #d32f2f; /* Fondo oscuro */
+    padding: 0;
+    z-index: 1000; /* Se coloca por encima de otros elementos */
+    display: flex;
+    justify-content: center; /* Centra los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente dentro del nav */
+
+}
+
+/* Estilo especial para el primer elemento (Índice) */
+.vertical-nav ul li.index a {
+    padding-left: 30px; /* Aumenta el margen izquierdo para que esté más adelantado */
+    font-weight: bold;  /* Hace que el texto sea más grueso */
+    font-size: 18px;    /* Aumenta el tamaño de la fuente */
+    background-color: #444; /* Color de fondo diferente */
+}
+
+.vertical-nav ul {
+    list-style-type: none; /* Quita los puntos de la lista */
+    margin: 0;
+    padding: 0;
+}
+
+.vertical-nav ul li {
+    margin: 0;
+}
+
+.vertical-nav ul li a {
+    display: block; /* Hace que el enlace ocupe todo el ancho */
+    padding: 15px;
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    color: white; /* Color de texto */
+    background-color:#d32f2f; /* Color de fondo */
+    border-bottom: 1px solid #555; /* Separación entre enlaces */
+    font-family: Arial, sans-serif;
+}
+
+.vertical-nav ul li a:hover {
+    background-color: #555; /* Color de fondo al pasar el mouse */
+}
+
+
+
+/* Secciones */
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    margin-bottom: 10px;
+    color: #d32f2f;
+}
+
+section p, ul {
+    margin-bottom: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
+form input, form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #d32f2f;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+form button:hover {
+    background-color: #b71c1c;
+}
+
+/* Estilo del pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

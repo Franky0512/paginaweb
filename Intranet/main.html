@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Inicio</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Contenedor Superior (Solo muestra la ubicación del usuario en el sistema) -->
+    <header class="breadcrumb">
+        <h2 class="location-title">Inicio</h2> <!-- Ubicación actual del usuario -->
+    </header>
+
+    <div class="main-layout">
+        <!-- Barra lateral de navegación -->
+        <aside class="sidebar">
+            <nav class="menu">
+                <ul>
+                    <li><a href="#" class="active">Inicio</a></li>
+                    <li><a href="Visualizar_Usuarios.html">Gestión de Usuarios</a></li>
+                    <li><a href="#">Gestión de Incidencias</a></li>
+                    <li><a href="#">Gestión de Actividades</a></li>
+                    <li><a href="#">Gestión de Equipos</a></li>
+                    <li><a href="#">Gestión de Vehículos</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Contenedor de opciones de usuario y novedades -->
+        <div class="content-area">
+            <!-- Contenedor de opciones de usuario -->
+            <section class="user-options">
+                <div class="user-info">
+                    <div >
+                        <p>Nombres y Apellidos</p>
+                        <p>-------------------------------</p>
+                        <p>Cargo</p>
+                    </div>
+                    <img src="img/icono_Usuario.png" alt="Perfil de usuario" class="profile-icon">
+                    <img src="img/icono_salir.png" alt="Cerrar sesión" class="logout-icon">
+                </div>
+            </section>
+
+            <!-- Sección de novedades -->
+            <section class="novedades">
+                <h3>Novedades</h3>
+                <p>Contenido de novedades...</p>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

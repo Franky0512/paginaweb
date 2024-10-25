@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estación de Bomberos Nº 71</title>
+    <link rel="stylesheet" href="css/sytlesnoticias.css">
+</head>
+<body>
+  
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="img/img1.jpg" alt="Logo Bomberos" class="logo-img">
+                <a href="#">Bomberos Nº 71</a>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <div class="auth-buttons">
+              <button class="btn">Registrarse</button>
+              <button class="btn">Iniciar sesión</button>
+          </div>
+        </nav>
+    </header>
+    
+
+<!--PONER EL CÓDIGO DE CADA SECCIÓN-->
+
+<section class="news-section">
+    <h2>Últimas Noticias</h2>
+
+    <!-- Noticia 1 -->
+    <div class="news-item">
+        <div class="news-text">
+            <h3>Noticia 001-2024: Nuevos Equipos de Rescate</h3>
+            <p><strong>Descripción:</strong> La estación de bomberos ha adquirido nuevos equipos de rescate, mejorando nuestra capacidad de respuesta.</p>
+            <p><strong>Fecha:</strong> 18 de octubre de 2024</p>
+            <a href="#" class="more-info" onclick="toggleNews(0)">Más información</a>
+            <div class="news-details" id="news-details-0">
+                <p>Los nuevos equipos incluyen sistemas de respiración autónoma y herramientas de corte de alta tecnología, lo que permitirá realizar rescates de manera más eficiente.</p>
+            </div>
+        </div>
+        <div class="news-image">
+            <img src="img/not1.jpg" alt="Equipos de Rescate">
+        </div>
+    </div>
+
+    <!-- Noticia 2 -->
+    <div class="news-item">
+        <div class="news-text">
+            <h3>Noticia 002-2024: Capacitación de Voluntarios</h3>
+            <p><strong>Descripción:</strong> Este mes se han iniciado nuevas capacitaciones para los bomberos voluntarios de nuestra estación.</p>
+            <p><strong>Fecha:</strong> 12 de octubre de 2024</p>
+            <a href="#" class="more-info" onclick="toggleNews(1)">Más información</a>
+            <div class="news-details" id="news-details-1">
+                <p>Las capacitaciones incluyen formación en primeros auxilios, técnicas de evacuación y manejo de extintores, asegurando que nuestros voluntarios estén mejor preparados.</p>
+            </div>
+        </div>
+        <div class="news-image">
+            <img src="img/not2.jpg" alt="Capacitación de Voluntarios">
+        </div>
+    </div>
+
+    <!-- Noticia 3 -->
+    <div class="news-item">
+        <div class="news-text">
+            <h3>Noticia 003-2024: Celebración del Día del Bombero</h3>
+            <p><strong>Descripción:</strong> La estación celebró el Día del Bombero con una ceremonia en honor a nuestros valientes voluntarios.</p>
+            <p><strong>Fecha:</strong> 10 de octubre de 2024</p>
+            <a href="#" class="more-info" onclick="toggleNews(2)">Más información</a>
+            <div class="news-details" id="news-details-2">
+                <p>La ceremonia incluyó discursos inspiradores, entrega de reconocimientos y actividades recreativas para los voluntarios y sus familias.</p>
+            </div>
+        </div>
+        <div class="news-image">
+            <img src="img/not3.jpg" alt="Día del Bombero">
+        </div>
+    </div>
+
+    <!-- Noticia 4 -->
+    <div class="news-item">
+        <div class="news-text">
+            <h3>Noticia 004-2024: Simulacro de Emergencia</h3>
+            <p><strong>Descripción:</strong> Se realizó un simulacro de emergencia en colaboración con las autoridades locales para evaluar nuestra capacidad de respuesta.</p>
+            <p><strong>Fecha:</strong> 5 de octubre de 2024</p>
+            <a href="#" class="more-info" onclick="toggleNews(3)">Más información</a>
+            <div class="news-details" id="news-details-3">
+                <p>El simulacro incluyó evacuaciones y el uso de equipos de rescate, proporcionando una valiosa experiencia para todos los participantes.</p>
+            </div>
+        </div>
+        <div class="news-image">
+            <img src="img/not4.jpg" alt="Simulacro de Emergencia">
+        </div>
+    </div>
+
+    <!-- Noticia 5 -->
+    <div class="news-item">
+        <div class="news-text">
+            <h3>Noticia 005-2024: Nueva Unidad de Bomberos</h3>
+            <p><strong>Descripción:</strong> La estación ha inaugurado una nueva unidad de bomberos para mejorar nuestra cobertura en la comunidad.</p>
+            <p><strong>Fecha:</strong> 1 de octubre de 2024</p>
+            <a href="#" class="more-info" onclick="toggleNews(4)">Más información</a>
+            <div class="news-details" id="news-details-4">
+                <p>Esta nueva unidad permitirá responder más rápidamente a emergencias, aumentando la seguridad en nuestra área de servicio.</p>
+            </div>
+        </div>
+        <div class="news-image">
+            <img src="img/not5.jpg" alt="Nueva Unidad de Bomberos">
+        </div>
+    </div>
+
+    <!-- Noticia 6 -->
+    <div class="news-item">
+        <div class="news-text">
+            <h3>Noticia 006-2024: Donación de Equipos</h3>
+            <p><strong>Descripción:</strong> Recibimos una donación significativa de equipos de rescate de una organización benéfica.</p>
+            <p><strong>Fecha:</strong> 25 de septiembre de 2024</p>
+            <a href="#" class="more-info" onclick="toggleNews(5)">Más información</a>
+            <div class="news-details" id="news-details-5">
+                <p>Estos equipos mejorarán nuestras operaciones y asegurarán que podamos ayudar a más personas en situaciones de emergencia.</p>
+            </div>
+        </div>
+        <div class="news-image">
+            <img src="img/not6.jpeg" alt="Donación de Equipos">
+        </div>
+    </div>
+
+    <!-- Noticia 7 -->
+    <div class="news-item">
+        <div class="news-text">
+            <h3>Noticia 007-2024: Campaña de Prevención de Incendios</h3>
+            <p><strong>Descripción:</strong> Lanzamos una campaña de prevención de incendios para educar a la comunidad sobre la seguridad.</p>
+            <p><strong>Fecha:</strong> 20 de septiembre de 2024</p>
+            <a href="#" class="more-info" onclick="toggleNews(6)">Más información</a>
+            <div class="news-details" id="news-details-6">
+                <p>La campaña incluye talleres, folletos informativos y charlas en escuelas locales sobre cómo prevenir incendios.</p>
+            </div>
+        </div>
+        <div class="news-image">
+            <img src="img/not7.jpeg" alt="Campaña de Prevención de Incendios">
+        </div>
+    </div>
+
+    <!-- Noticia 8 -->
+    <div class="news-item">
+        <div class="news-text">
+            <h3>Noticia 008-2024: Participación en Competencia Nacional</h3>
+            <p><strong>Descripción:</strong> Nuestro equipo participó en la competencia nacional de bomberos, destacándose en varias pruebas.</p>
+            <p><strong>Fecha:</strong> 15 de septiembre de 2024</p>
+            <a href="#" class="more-info" onclick="toggleNews(7)">Más información</a>
+            <div class="news-details" id="news-details-7">
+                <p>Los voluntarios demostraron su habilidad y compromiso, llevando a casa varios premios y reconocimientos.</p>
+            </div>
+        </div>
+        <div class="news-image">
+            <img src="img/not8.jpeg" alt="Competencia Nacional">
+        </div>
+    </div>
+
+    <!-- Noticia 9 -->
+    <div class="news-item">
+        <div class="news-text">
+            <h3>Noticia 009-2024: Taller de Seguridad en el Hogar</h3>
+            <p><strong>Descripción:</strong> Se realizó un taller de seguridad en el hogar para familias locales, enseñando medidas de prevención.</p>
+            <p><strong>Fecha:</strong> 10 de septiembre de 2024</p>
+            <a href="#" class="more-info" onclick="toggleNews(8)">Más información</a>
+            <div class="news-details" id="news-details-8">
+                <p>El taller abarcó el uso de extintores, escape en caso de incendio y la importancia de tener un plan de emergencia.</p>
+            </div>
+        </div>
+        <div class="news-image">
+            <img src="img/not9.jpeg" alt="Taller de Seguridad">
+        </div>
+    </div>
+
+    <!-- Noticia 10 -->
+    <div class="news-item">
+        <div class="news-text">
+            <h3>Noticia 010-2024: Reunión Comunitaria</h3>
+            <p><strong>Descripción:</strong> Se llevó a cabo una reunión comunitaria para discutir sobre la seguridad y prevención de incendios.</p>
+            <p><strong>Fecha:</strong> 1 de septiembre de 2024</p>
+            <a href="#" class="more-info" onclick="toggleNews(9)">Más información</a>
+            <div class="news-details" id="news-details-9">
+                <p>Los residentes tuvieron la oportunidad de expresar sus preocupaciones y sugerencias para mejorar la seguridad en el área.</p>
+            </div>
+        </div>
+        <div class="news-image">
+            <img src="img/not10.jpg" alt="Reunión Comunitaria">
+        </div>
+    </div>
+
+</section>
+
+
+
+
+    <script src="js/javaservicios.js"></script>
+</body>
+
+<footer>
+  <div class="footer-container">
+      <div class="footer-section about">
+          <h3>Estación de Bomberos Nº 71</h3>
+          <p>Comprometidos con la protección y seguridad de la comunidad de Tarapoto. Actuamos en emergencias, capacitaciones y prevención.</p>
+      </div>
+      
+      <div class="footer-section links">
+          <h3>Enlaces Rápidos</h3>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+      </div>
+
+      <div class="footer-section contact">
+          <h3>Contáctanos</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Tarapoto, Perú</p>
+          <p><i class="fas fa-phone-alt"></i> +51 999 888 777</p>
+          <p><i class="fas fa-envelope"></i> info@bomberos71.pe</p>
+      </div>
+
+      <div class="footer-section social">
+          <h3>Síguenos</h3>
+          <div class="social-links">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+      </div>
+  </div>
+
+  <div class="footer-bottom">
+      &copy; 2024 Estación de Bomberos Voluntarios Nº 71 | Todos los derechos reservados.
+  </div>
+</footer>
+
+
+</html>
